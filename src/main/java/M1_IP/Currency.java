@@ -4,7 +4,7 @@ public class Currency {
 
     private String fromName;
     private String toName;
-    private String name;
+    private final String name;
     private double value;
 
     public Currency(String name , String value) {
@@ -15,10 +15,6 @@ public class Currency {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public double getValue() {

@@ -9,7 +9,7 @@ public class MainPanel extends JPanel {
     private GridLayout gridLayout;
     private ArrayList<JButton> buttons;
     private JButton homePageButton;
-    private JComboBox comboBox;
+    private JComboBox<String> comboBox;
     private String[] updateFrequencyOptions;
     SpecificCurrencyPanel specificCurrencyPanel;
 
