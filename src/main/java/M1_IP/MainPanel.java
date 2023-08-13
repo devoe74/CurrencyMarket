@@ -35,28 +35,25 @@ public class MainPanel extends JPanel {
             if (i == 34 && middle){
                 this.comboBox.setSelectedIndex(2);
                 this.comboBox.setFont(new Font("Times New Roman" , Font.PLAIN, 35));
+                this.comboBox.setBackground(new Color(189 , 252 , 186));
                 this.add(this.comboBox);
                 i --;
                 middle = false;
             }
             else {
                 buttons.add(new JButton(MainCalculation.getCurrencies().get(i).getName()));
-                buttons.get(i).setBackground(Color.CYAN);
+                buttons.get(i).setBackground(new Color(95 , 166 , 87));
                 buttons.get(i).setFont(new Font("Times New Roman" , Font.PLAIN , 20));
                 JButton button = buttons.get(i);
-                buttons.get(i).addActionListener(e -> {
-                    buttonClicked(MainCalculation.getCurrencies().get(this.buttons.indexOf(button)) , this.buttons.indexOf(button));
-                });
+                buttons.get(i).addActionListener(e -> buttonClicked(MainCalculation.getCurrencies().get(this.buttons.indexOf(button)) , this.buttons.indexOf(button)));
                 this.add(buttons.get(i));
             }
         }
 
         this.homePageButton.setBounds(70 , 70 , 200 , 40);
         this.homePageButton.setFont(new Font("Times New Roman" , Font.PLAIN , 30));
-        this.homePageButton.setBackground(Color.CYAN);
-        this.homePageButton.addActionListener(e -> {
-            returnToHomePage();
-        });
+        this.homePageButton.setBackground(new Color(95 , 166 , 87));
+        this.homePageButton.addActionListener(e -> returnToHomePage());
         this.homePageButton.setVisible(false);
 
 
@@ -97,9 +94,8 @@ public class MainPanel extends JPanel {
         try {
             return Integer.parseInt(this.updateFrequencyOptions[index].substring(2 , this.updateFrequencyOptions[index].indexOf("s") -1));
         } catch(NumberFormatException e1) {
-
+            return 1000;
         }
-        return 1000;
     }
 
 }

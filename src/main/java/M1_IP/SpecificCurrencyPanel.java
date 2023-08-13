@@ -53,6 +53,7 @@ public class SpecificCurrencyPanel extends JPanel {
 
             this.switchCurrenciesButton.setBounds(840,140,210,110);
             this.switchCurrenciesButton.setFont(new Font("Times New Roman" , Font.BOLD , 100));
+            this.switchCurrenciesButton.setBackground(new Color(107 , 169 , 136));
             this.switchCurrenciesButton.addActionListener(e -> {
                 if (this.switchCurrenciesButton.getText().equals(">>>")){
                     whatToDisplay(1);
@@ -72,11 +73,12 @@ public class SpecificCurrencyPanel extends JPanel {
             this.add(valueLabel);
 
             this.convertValueField.setBounds(200 , 800 , 500 , 70);
-            this.convertValueField.setFont(new Font("Times New Roman" , Font.PLAIN , 40));
+            this.convertValueField.setFont(new Font("Times New Roman" , Font.BOLD , 40));
             this.add(this.convertValueField);
 
             this.convertValueButton.setBounds(840 , 800 , 210 , 70);
             this.convertValueButton.setFont(new Font("Times New Roman" , Font.BOLD , 50));
+            this.convertValueButton.setBackground(new Color(107 , 169 , 136));
             this.convertValueButton.addActionListener(e -> {
                 try {
                     double userRequest = Double.parseDouble(this.convertValueField.getText());
